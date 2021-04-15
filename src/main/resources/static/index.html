@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Java Spring Chat</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body background="css/pexels-photo-1563356.jpeg"
+      style="background-position: center; background-repeat: no-repeat; background-size: cover;">
+<noscript>
+    <h2>Your Browser don't support  JavaScript</h2>
+</noscript>
+
+<div id="username-page">
+    <div class="username-page-container">
+        <h1 class="title">Write your name and surname</h1>
+        <form id="usernameForm" name="usernameForm">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Name"
+                       autocomplete="off" class="form-control" />
+                <br>
+                <br>
+                <input type="text" id="lastname" placeholder="FullName"
+                       autocomplete="off" class="form-control" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="accent username-submit">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="chat-page"  class="hidden">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chat message</h2>
+        </div>
+        <div class="connecting">Connect to chat...</div>
+        <ul id="messageArea">
+        </ul>
+        <form id="messageForm" name="messageForm" nameForm="messageForm">
+            <div class="form-group">
+                <div class="input-group clearfix">
+                    <input type="text" id="message" placeholder="Say what you think"
+                           autocomplete="off" class="form-control" />
+                    <button type="submit" class="primary">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>
